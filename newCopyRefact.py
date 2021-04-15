@@ -9,7 +9,6 @@ class xslToJson:
 		self.df = pd.read_excel(nameFile, engine="openpyxl")
 		self.getHeaders()
 		self.makeObjectsUsingHeaders()
-		self.lastStep()
 
 	def saveDataToFile(self,content):
 		theCopy= content.copy()
@@ -28,15 +27,21 @@ class xslToJson:
 					self.obj[headerName] = self.df[headerName][x]
 			self.saveDataToFile(self.obj)
 
-	def lastStep(self):
+	# giving values back for Use...
+	def giveValueBack(self):
+		# makeString = str(self.a_list)
+		return self.a_list
+
+	def giveHeadersBack(self):
+		return self.objectCreatedForJsonFileFromHeaders
+
+	def saveToFile(self):
 		makeString = str(self.a_list)
 		with open('data.json', 'w') as json_file:
 			json.dump(makeString, json_file)
 
 
-
-# just give me the name of the xlsx file to strip data from it
-load = xslToJson("me.xlsx")
+# done.......
 
 
 
