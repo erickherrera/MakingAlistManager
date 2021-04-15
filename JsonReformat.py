@@ -11,14 +11,16 @@ matchingHeadersFromJsonList = []
 
 # find similar strings function
 def similar(a, b):
-    return SequenceMatcher(None, a, b).ratio()
+	headername = a.lower()
+	headerNameFromSL = b.lower()
+	return SequenceMatcher(None,headername,headerNameFromSL).ratio()
 
 
 # I will find The headers for the new Json
 def findHeadersToReformat(headers,content):
+	# find Name or full name
+	print("waiting for code...")
 
-	print(headers[0])
-	print(content[1]['First Name'])
 
 
 
