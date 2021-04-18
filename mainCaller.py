@@ -11,7 +11,7 @@ valueFromContent =  load.giveValueBack()
 
 # reformat values 
 formatingJson = ReFormatJson(headersGiver,valueFromContent)
-formatingJson.findHeadersToReformat()
+formatingJson.headFinderManager()
 
 # if you wanna save end result use function 
 # formatingJson.saveToFile()

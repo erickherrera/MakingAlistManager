@@ -119,6 +119,7 @@ class ReFormatJson:
 
 	# I will make sure they find our headers
 	def headFinderManager(self):
+		print('Re Formating....')
 		# for each array object call the finders....
 		for eachObjactFromContent in range(len(self.content)):
 			self.findNameHeaders(eachObjactFromContent)
@@ -129,6 +130,5 @@ class ReFormatJson:
 			self.landlineHeaderFinder(eachObjactFromContent)
 			self.MailHeaderAddress(eachObjactFromContent)
 			self.finishObject['sms'] = "false"
-
-		self.saveToList(finishObject)
+			self.saveToList(self.finishObject)
 # done  ....
