@@ -30,7 +30,6 @@ class xslToJson:
 
 	# giving values back for Use...
 	def giveValueBack(self):
-		# makeString = str(self.a_list)
 		return self.a_list
 
 	def giveHeadersBack(self):
